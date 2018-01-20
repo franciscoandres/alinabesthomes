@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alina Best Homes</title>
     <link rel="stylesheet" href="https://unpkg.com/hotlinecss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <style>
@@ -76,9 +77,19 @@
         <div class="w-90 md-w-80 mh-auto pt4">
           <div class="flex flex-wrap relative nmh3">
             <!-- property detail -->
-            <div class="w-100 lg-w-66 mb4 ph3">
-              <div>
-                <img src="http://lorempixel.com/400/200/sports/" alt="" height="450" class="w-100 block fit-fill">
+            <div class="w-100 lg-w-66 mb4 ph3 border-box">
+              <div class="mb3">
+                <ul id="lightSlider">
+                  <li data-thumb="assets/images/site/1.jpeg">
+                    <img src="assets/images/site/1.jpeg" class="d-block w-100" alt="">
+                  </li>
+                  <li data-thumb="https://placeimg.com/640/480/nature">
+                    <img src="https://placeimg.com/640/480/nature" class="d-block w-100" alt="">
+                  </li>
+                  <li data-thumb="https://placeimg.com/640/480/people">
+                    <img src="https://placeimg.com/640/480/people" class="d-block w-100" alt="">
+                  </li>
+                </ul>
               </div>
               <div class="mb4">
                 <h1 class="font-4 lg-font-3 black-80 line-copy">8830 NW 4th St, Pembroke Pines, FL 33024-6512</h1>
@@ -129,6 +140,14 @@
                     </li>
                     <li class="flex items-center mb2 border-b border-black-10">
                       <div class="w-50">
+                        <p class="mb0 pb2 black-70">For</p>
+                      </div>
+                      <div class="w-50">
+                        <p class="mb0 pb2 font-bold black-80">Buy</p>
+                      </div>
+                    </li>
+                    <li class="flex items-center mb2 border-b border-black-10">
+                      <div class="w-50">
                         <p class="mb0 pb2 black-70">Type</p>
                       </div>
                       <div class="w-50">
@@ -164,11 +183,26 @@
           </div>
         </div>
       </div>
-      <div class="w-90 md-w-80 mh-auto nmh3">
-        <div class="w-100 lg-w-66 mb4">
-          <div class="line-copy font-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt debitis commodi temporibus corporis nesciunt error modi quam molestiae nisi repellat cum, nemo atque nobis reiciendis earum vel unde, alias ab corrupti itaque. Est facilis quibusdam commodi laboriosam obcaecati ipsa?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quos, suscipit non, earum iste possimus delectus perspiciatis. Culpa, ipsum consequuntur a corporis.</p>
+      <div class="w-90 md-w-80 mh-auto">
+        <div class="flex flex-wrap nmh3">
+          <div class="w-100 lg-w-66 mb4 pa3 border-box order-2 lg-order-1">
+            <div class="line-copy font-4">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt debitis commodi temporibus corporis nesciunt error modi quam molestiae nisi repellat cum, nemo atque nobis reiciendis earum vel unde, alias ab corrupti itaque. Est facilis quibusdam commodi laboriosam obcaecati ipsa?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quos, suscipit non, earum iste possimus delectus perspiciatis. Culpa, ipsum consequuntur a corporis.</p>
+            </div>
+          </div>
+          <div class="w-100 lg-w-33 pa3 border-box order-1 lg-order-2">
+            <ul class="list pl0 flex flex-wrap">
+              <li class="w-50 font-400 font-4 mb3">
+                <i class="fas fa-check-circle mr2 c-sunset-orange"></i>Security
+              </li>
+              <li class="w-50 font-400 font-4 mb3">
+                <i class="fas fa-check-circle mr2 c-sunset-orange"></i>Asensor
+              </li>
+              <li class="w-50 font-400 font-4 mb3">
+                <i class="fas fa-check-circle mr2 c-sunset-orange"></i>Views
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -209,5 +243,22 @@
       </div>
     </footer>
     <!-- /footer -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    <script>
+      let config = {
+        item: 1,
+        speed: 500,
+        gallery: true,
+        enableTouch: true,
+        swipeThreshold: 40,
+        adaptiveHeight:true
+      }
+
+      $(document).ready(function() {
+        $("#lightSlider").lightSlider(config); 
+      });
+    </script>
   </body>
 </html>
